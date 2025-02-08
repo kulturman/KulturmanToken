@@ -2,4 +2,3 @@ node_modules
 .idea
 artifacts
 cache
-ignition/deployments
