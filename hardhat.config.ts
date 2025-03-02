@@ -1,13 +1,11 @@
-require("@nomicfoundation/hardhat-toolbox");
-require("@nomicfoundation/hardhat-ignition-ethers");
-const { vars } = require('hardhat/config');
+import {HardhatUserConfig, vars} from "hardhat/config";
+import "@nomicfoundation/hardhat-toolbox";
 
 const ALCHEMY_API_KEY = vars.get('ALCHEMY_API_KEY');
 const SEPOLIA_PRIVATE_KEY = vars.get('SEPOLIA_PRIVATE_KEY');
 const ETHERSCAN_API_KEY = vars.get('ETHERSCAN_API_KEY');
 
-/** @type import('hardhat/config').HardhatUserConfig */
-module.exports = {
+const config: HardhatUserConfig = {
   solidity: "0.8.28",
   networks: {
     sepolia: {
@@ -19,3 +17,5 @@ module.exports = {
     apiKey: ETHERSCAN_API_KEY,
   }
 };
+
+export default config;
