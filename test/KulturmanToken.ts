@@ -1,6 +1,6 @@
 import {expect} from 'chai';
 import hre from "hardhat";
-import {Contract, Signer} from "ethers";
+import {Signer} from "ethers";
 import {KulturmanToken} from "../typechain-types";
 
 
