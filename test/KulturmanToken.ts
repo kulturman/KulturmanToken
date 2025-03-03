@@ -1,10 +1,13 @@
 import {expect} from 'chai';
 import hre from "hardhat";
+import {Contract, Signer} from "ethers";
+import {KulturmanToken} from "../typechain-types";
 
-describe("KulturmanToken", function() {
-    let contract: any;
+
+describe("KulturmanToken", function () {
+    let contract: KulturmanToken;
     let contractOwnerInitialBalance = 1_000_000n;
-    let contractOwner;
+    let contractOwner: Signer;
 
     beforeEach(async () => {
         contract = await hre.ethers.deployContract('KulturmanToken');
