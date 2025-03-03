@@ -61,6 +61,8 @@ contract KulturmanToken is IERC20 {
     function transferFrom(address from, address to, uint256 amount) external returns (bool) {
         require(balances[from] >= amount, "Not enough tokens");
         require(allowances[from][msg.sender] >= amount, "Allowance exceeded");
+        //We can use transfer function here
+
 
         balances[from] -= amount;
         balances[to] += amount;
