@@ -2,17 +2,17 @@
 pragma solidity ^0.8.13;
 
 import {Script, console} from "forge-std/Script.sol";
-import {KulturmanToken} from "../src/KulturmanToken.sol";
+import {Counter} from "../src/Counter.sol";
 
 contract CounterScript is Script {
-    KulturmanToken public kulturmanToken;
+    Counter public counter;
 
     function setUp() public {}
 
     function run() public {
         vm.startBroadcast();
 
-        kulturmanToken = new KulturmanToken();
+        counter = new Counter();
 
         vm.stopBroadcast();
     }
